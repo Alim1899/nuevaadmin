@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+    --background-color: #2F3C49; 
+    --dark-background:#2F3D48;
+    --light-background:#495E71;
+    --foreground-color: #035a4e; 
+    --navbar-light:#E6E7E6;
+    --navbar-dark:#236570;
+    --navbar:#B0DFE5;
+    --dark-text: #062906;
+    --light-text:#F1FEFF;
+    --header-font-size:clamp(1rem, 4vw, 2rem);
+    --navbar-height:50px;
+    --header-width: clamp(120px,40vw,400px);
+    --content-width:clamp(275px,95%,1500px);
+    --header-border-radius:5px;
+    --footer-height:clamp(130px,30vw,200px);
+    --content-height:calc(100vh - 2 * var(--navbar-height) - var(--footer-height) - 2px);
   }
+  body {
+    background-color: var(--navbar-light);
+    overflow-x: hidden;
+    position: relative; /* Necessary for positioning pseudo-element */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(5px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind other content */
+}
+  
+::-webkit-scrollbar{
+    width: 4px;
+    height: 3px;
+    background-color: rgb(8, 7, 7);
+}
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fff; /* Color of the scrollbar handle */
 }

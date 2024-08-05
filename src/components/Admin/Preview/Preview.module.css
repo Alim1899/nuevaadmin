@@ -1,0 +1,110 @@
+.preview {
+  border-radius: 15px;
+  border: 1px solid gold;
+  margin: 3px;
+  background-color: var(--foreground-color);
+  display: grid;
+  grid-template-rows: 10% 90%;
+  column-gap: 1%;
+}
+.prevHeader{
+  text-align: center;
+}
+
+.bin {
+  height: 50px;
+  display: block;
+  border: 1px solid;
+  margin-left: -55px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+
+.bin:hover {
+  opacity: 0.5;
+}
+.none {
+  display: none;
+}
+
+/* Styling scrollbar */
+.photos {
+  text-align: center;
+  height: 100%;
+  width: 98%;
+  border-radius: 15px;
+  margin-top: 5px;
+  overflow: auto;
+}
+
+.photoScroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%; 
+  overflow-y: auto;
+}
+.photo {
+  display: inline-flex;
+  align-items: flex-end;
+  cursor: pointer;
+ height: 10vh;
+ min-height: 200px;
+ min-width: 200px;
+ width: 10vw;
+ margin: 0.2vw;
+ border: 15ppx;
+}
+
+.uploadedImages {
+  width: 70%;
+  height: 50%;
+  margin-top: 10%;
+  font-size: clamp(1.1rem, 3vw, 2.4rem);
+  border-radius: 50px;
+  border: 1px solid gold;
+  display: grid;
+  place-content: center;
+  margin: auto;
+}
+
+
+
+
+.imagePrev {
+  height: 100%;
+  width: 100%;
+  margin: 5px;
+}
+
+.saveButton,.disabledButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: var(--navbar-light);
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: 900;
+  border-radius: 15px;
+  border: none;
+  border-top: 1px solid gold;
+  color: aliceblue;
+}
+.disabledButton{
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.saveButton:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 800px) {
+
+}
